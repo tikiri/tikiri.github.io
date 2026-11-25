@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "route": "/education--experience.html", "redirect": "/experience.html", "statusCode": 301 }
+  ],
+  "responseOverrides": { "404": { "rewrite": "/404.html", "statusCode": 404 } }
+}

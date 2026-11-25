@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://obeysekera.net/sitemap.xml
