@@ -6,28 +6,26 @@ This site is plain HTML, CSS and JavaScript. No special software or build step i
 
 | To change… | Edit this file |
 |---|---|
-| Publications (add a new paper) | `data/publications.js`. Copy an entry, paste it at the top, change the text |
-| Books | bottom of `data/publications.js` |
-| Old reports & presentations | `data/reports.js` |
+| Publications (all 7 CV sections: journal articles, books, chapters, technical reports, proceedings, abstracts, preprints/other) | `data/publications.js`. Each section is its own list, in the same order and with the same numbering as the CV |
 | Email, CV file, profile links (Google Scholar, ORCID, LinkedIn…) | `data/site-config.js` |
 | Photo gallery | put photos in `images/gallery/`, list them in `data/site-config.js` |
 | Menu items | the `NAV` list at the top of `assets/js/site.js` |
 | Bio and home page text | `index.html` |
 | Experience, Research, Teaching, Service, Contact | the matching `.html` file |
 | Colours and fonts | top of `assets/css/style.css` |
-| CV download | replace `files/CV_Obeysekera_2026.pdf` (keep the same name, or update `cv:` in `data/site-config.js`) |
+| CV download | replace `files/CV_Obeysekera_2026.pdf` with a PDF of your latest CV (keep the same name, or update `cv:` in `data/site-config.js`) |
 
-The home page's publication count and "Recent publications" update by themselves from `data/publications.js`.
+The home page's journal-article count and "Recent journal articles" update by themselves from `data/publications.js`. When you update your CV, update `data/publications.js` and the CV PDF together so they match.
 
 ## Adding a paper (example)
 
+Paste a new line at the top of the right list (for example `journal: [`). The site numbers the items automatically to match the CV.
+
 ```js
-  { y: 2027, a: "A. Author, J. Obeysekera",
-    t: "Title of the paper",
-    v: "Journal Name, 12(3), 45–67", doi: "10.xxxx/xxxxx", tags: ["sealevel"] },
+    { y: 2027, c: "Author, A., & Obeysekera, J. (2027). Title of the paper. Journal Name, 12(3), 45–67.", doi: "10.xxxx/xxxxx", tags: ["sealevel"] },
 ```
 
-Keep the commas and quotation marks. Topic tags: `sealevel`, `extremes`, `climate`, `everglades`, `ml`, `groundwater`, `stochastic`, `srilanka`.
+Keep the commas and quotation marks. Your name is shown in bold automatically. Topic tags: `sealevel`, `extremes`, `climate`, `everglades`, `ml`, `groundwater`, `stochastic`, `srilanka`.
 
 ## Photos still to add
 
@@ -45,18 +43,19 @@ Save these from the old site (open each link, right-click → Save Image As) int
 
 Until they are saved, the pages show the copies on the old site, which will disappear when that site goes offline.
 
-## Publishing on GitHub Pages (free)
+## Publishing (GitHub Pages)
 
-1. Create a free account at github.com, then a new **public** repository named `obeysekera-site`.
-2. On the repository page choose **Add file → Upload files**, drag in *everything inside* this folder (including the `CNAME` file), and click **Commit changes**.
-3. Go to **Settings → Pages**. Under *Build and deployment*, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, and click **Save**. In a minute the site is live at `https://<your-username>.github.io/obeysekera-site/`.
-4. **Point your domain.** Wherever obeysekera.net is registered, set these DNS records:
-   - `A` records for `@`: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
-   - `CNAME` record for `www`: `<your-username>.github.io`
-   - Keep any `tsunami` record pointing to wherever the Tsunami site is hosted.
-5. Back in **Settings → Pages**, enter `obeysekera.net` as the custom domain and tick **Enforce HTTPS** once it's offered.
+The site is live at **https://tikiri.github.io** from the repository `tikiri/tikiri.github.io`.
 
-**Later edits:** open the file on github.com, click the pencil icon, make the change and click **Commit changes**. The site updates within a minute or two.
+- **Small edits:** open the file on github.com, click the pencil icon, make the change, and click **Commit changes**. The site updates within a minute or two.
+- **Many files:** on the repository page choose **Add file → Upload files**, drag the changed files or folders in, and click **Commit changes**. Files with the same name are replaced.
+
+**Connecting obeysekera.net later:** wherever the domain is registered, set these DNS records:
+- `A` records for `@`: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+- `CNAME` record for `www`: `tikiri.github.io`
+- Keep any `tsunami` record pointing to wherever the Tsunami site is hosted.
+
+Then in the repository's **Settings → Pages**, enter `obeysekera.net` as the custom domain and tick **Enforce HTTPS** once it's offered.
 
 ## Moving to Microsoft later
 

@@ -14,7 +14,7 @@ window.SITE = {
     { label: "FIU Profile",     url: "https://case.fiu.edu/about/directory/profiles/obeysekera-jayantha.html" },
     { label: "FIU Discovery",   url: "https://discovery.fiu.edu/display/person-obeysekera-jayantha" },
     { label: "Google Scholar",  url: "" },   // paste your Google Scholar profile link here
-    { label: "ORCID",           url: "" },   // e.g. "https://orcid.org/0000-0000-0000-0000"
+    { label: "ORCID",           url: "https://orcid.org/0000-0002-7038-1668" },
     { label: "ResearchGate",    url: "" },
     { label: "LinkedIn",        url: "" }
   ]
